@@ -26,5 +26,5 @@ eventEmitter.on('data_received', () => {
 // trigger connection event
 eventEmitter.emit('connection');
 
-console.log('the process is end\n');
+console.log('the program is end\n');
 

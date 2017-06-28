@@ -12,5 +12,5 @@ fs.readFile('input.txt', (err, data) => {
 	console.log(data.toString());
 });
 
-console.log('the process is end\n');
+console.log('the program is end\n');
 

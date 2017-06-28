@@ -8,7 +8,7 @@ let fs = require('fs');
 let data = fs.readFileSync('repl.txt');
 
 console.log(data.toString());
-console.log('The process is end\n');
+console.log('The program is end\n');
 */
 
 //async
@@ -21,5 +21,5 @@ fs.readFile('repl.txt', (err, data) => {
 	console.log(data.toString());
 });
 
-console.log('the process is end\n');
+console.log('the program is end\n');
 
