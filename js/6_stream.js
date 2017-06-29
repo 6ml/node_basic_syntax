@@ -57,7 +57,7 @@ let fs = require('fs');
 let data = "博客地址: blog.lupath.com";
 
 // create a writable stream, write into file output.txt
-let writerStream = fs.createWriteStream('ouput.txt');
+let writerStream = fs.createWriteStream('output.txt');
 
 // use utf-8 encoding
 writerStream.write(data, 'UTF8');
@@ -109,6 +109,7 @@ console.log('the program is end\n');
  */
 
 // 实例，通过管道流和链式流来压缩和解压文件
+
 let fs = require('fs');
 let zlib = require('zlib');
 

@@ -16,12 +16,15 @@
 
 // 实例
 // ./module/main.js
+/*
 let Hello = require('./hello');
 hello = new Hello();
 hello.setName('lupath');
 hello.sayName();
+*/
 
 // ./module/hello.js
+/*
 Hello = () => {
 	let name;
 	this.setName = theName => {
@@ -33,4 +36,20 @@ Hello = () => {
 };
 
 module.exports = Hello;
+*/
+
+/* 服务器的模块放在哪里
+ */
+
+/* require 方法内部加载
+ * 
+ * - 首先查看是否在文件模块缓冲区中
+ * -	Y: return exports
+ * -	N: 查看是否原生模块
+ * -		Y: 查看是否在原生模块缓存区中
+ * -			Y: return exports
+ * -			N: 加载原生模块-->缓存原声模-->return exports
+ * -		N: 查看文件模块-->根据扩展名载入文件模-->缓存文件模-->return exports
+ * 
+ */
 
