@@ -1,12 +1,1 @@
-1 + 4
-30 * (20 - 5 * 2)
-x = 10
-var y = 20
-x + y
-var result = _
-console.log('console')
-do {
-x++;
-console.log("x:"+x);
-}
-while (x < 15);
+我是通过写入的文件内容
