@@ -14,6 +14,8 @@ app.use(express.static('./'));
 
 // ??? 不写 app.get() 同样能返回对应文件
 // ??? 无论写不写 app.get() 并且无论返回什么 请求文件只会返回对应文件
+
+// --> express.static 指定 root 为静态资源的根目录后就可以直接在 url 上输入静态资源路径就能访问
 app.get('/post.html', (req, res) => {
 	res.sendFile(`${__dirname}/post.html`);
 	res.end('5121231');
