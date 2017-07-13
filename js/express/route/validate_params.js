@@ -4,11 +4,13 @@ let app = express();
 let router = express.Router();
 
 router.param('name', (req, res, next, name) => {
-	// do some validation
 
 	console.log(`doing name validations on ${name}`);
-
-	req.name = name;
+	
+	// do some validation
+	if(name === "lupath"){
+		req.name = name;
+	}
 
 	next();
 });
@@ -19,4 +21,6 @@ router.get('/hello/:name', (req, res) => {
 
 app.use('/', router);
 
-app.listen(8080, )
+app.listen(8080, () => {
+	console.log('the server is running at 127.0.0.1:8080...');
+});

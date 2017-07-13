@@ -5,15 +5,17 @@ let selectData = (db, callback) => {
 	// connect to table
 	let collection = db.collection("site");
 	// query data
-	let whereStr = {"name": "菜鸟教程"};
+	let whereStr = {
+		"name": "菜鸟教程"
+	};
 
 	collection.find(whereStr).toArray((err, result) => {
-		if(err){
+		if (err) {
 			console.log(`ERROR: ${err}`);
 			return;
 		}
 		callback(result);
-	})
+	});
 };
 
 MongoClient.connect(DB_CONN_STR, (err, db) => {

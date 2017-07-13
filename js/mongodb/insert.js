@@ -10,16 +10,22 @@ let insertData = (db, callback) => {
 	// connect to table site
 	let collection = db.collection('site');
 	// insert data
-	let data = [{"name": "菜鸟教程", "url": "www.runoob.com"}, {"name": "博客", "url": "blog.lupath.com"}];
+	let data = [{
+		"name": "菜鸟教程",
+		"url": "www.runoob.com"
+	}, {
+		"name": "博客",
+		"url": "blog.lupath.com"
+	}];
 
 	collection.insert(data, (err, result) => {
-		if(err){
+		if (err) {
 			console.log(`ERROR: ${err}`);
 			return;
 		}
 		callback(result);
 	});
-}
+};
 
 
 MongoClient.connect(DB_CONN_STR, (err, db) => {

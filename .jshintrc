@@ -26,11 +26,10 @@
   "undef": true,            // 变量未定义
   "unused": true,           // 变量定义未使用
   // "varstmt": true,          // 禁止使用 var 声明变量
-
+  "devel": false,            // 定义用于日志调试的全局变量: console, alert 等
 
   "plusplus": false,
   "regexp": false,
-  "devel": true,
   
   
   

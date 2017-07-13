@@ -6,15 +6,17 @@ let delData = (db, callback) => {
 	// connect to table
 	let collection = db.collection('site');
 	// delete data
-	let whereStr = {"name": "百度"};
+	let whereStr = {
+		"name": "百度"
+	};
 	collection.remove(whereStr, (err, result) => {
-		if(err){
+		if (err) {
 			console.log(`ERROR: ${err}`);
 			return;
 		}
 		callback(result);
 	});
-}
+};
 
 MongoClient.connect(DB_CONN_STR, (err, db) => {
 	console.log('connect success!');

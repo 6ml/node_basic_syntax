@@ -26,6 +26,7 @@ app.get('/rest_add.html', (req ,res) => {
 	res.sendFile(`${__dirname}/rest_add.html`);
 });
 
+
 app.get('/rest_delete.html', (req ,res) => {
 	res.sendFile(`${__dirname}/rest_delete.html`);
 });
