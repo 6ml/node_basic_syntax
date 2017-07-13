@@ -1,15 +1,20 @@
 let User = require('./schema');
 
 /**
- * 插入数据
- * Model#save([fn])
+ * Model model 是由 schema 生成的模型，可以对数据库操作
  */
 
-let insert = () => {
+/**
+ * 插入数据
+ * Model#save([fn])
+ * @return {Object} [插入到 mongodb 中的对象]
+ */
+
+let insert = (username, password, age) => {
 	let user = new User({
-		username: "lupath",
-		password: "123abc",
-		age: 21,
+		username,
+		password,
+		age,
 		loginDate: new Date()
 	});
 
@@ -22,4 +27,6 @@ let insert = () => {
 	});
 };
 
-insert();
+insert("lupath", "123456", 21);
+insert("zhangsan", "234567", 21);
+insert("lisi", "abcdef", 22);
